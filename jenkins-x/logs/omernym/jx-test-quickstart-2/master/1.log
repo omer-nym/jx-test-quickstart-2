@@ -8,3 +8,37 @@ Step: step-working-dir-initializer-fk2tt:
 {"level":"info","ts":1566474672.3396337,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
 Step: step-place-tools:
 
+Step: step-git-source-meta-*******-**-test-quickstart-wtx2r:
+
+{"level":"warn","ts":1566474760.251205,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1566474760.4058537,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/*******/**-test-quickstart-3.git @ 7b2a9ede3be96b12b9e2fbdc3e31bdd16fb480d3 in path /workspace/source"}
+Step: step-git-merge:
+
+{"level":"info","msg":"Using SHAs from PULL_REFS=master:6d7ea691aff758686d893fcab722bfe658d7c458","time":"2019-08-22T11:52:40Z"}
+{"level":"warning","msg":"no SHAs to merge, falling back to initial cloned commit","time":"2019-08-22T11:52:40Z"}
+Step: step-merge-pull-refs:
+
+SKIP merge-pull-refs: Nothing to merge
+Step: step-create-effective-pipeline:
+
+{"level":"info","msg":"Deleting and cloning the Jenkins X versions repo","time":"2019-08-22T11:52:42Z"}
+{"level":"info","msg":"Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions","time":"2019-08-22T11:52:42Z"}
+{"level":"info","msg":"Effective pipeline written to jenkins-x-effective.yml","time":"2019-08-22T11:52:43Z"}
+Step: step-create-tekton-crds:
+
+{"level":"info","msg":"running command: echo \\$(**-release-version) \u003e VERSION","time":"2019-08-22T11:52:44Z"}
+{"level":"info","msg":"","time":"2019-08-22T11:52:44Z"}
+{"level":"info","msg":"running command: ** step tag --version \\$(cat VERSION)","time":"2019-08-22T11:52:44Z"}
+{"level":"info","msg":"Updating chart version in charts/**-test-quickstart-3/Chart.yaml to 0.0.3","time":"2019-08-22T11:52:44Z"}
+{"level":"info","msg":"Updating repository in charts/**-test-quickstart-3/values.yaml to 733373435183.dkr.ecr.us-east-1.amazonaws.com/*******/**-test-quickstart-2","time":"2019-08-22T11:52:44Z"}
+{"level":"info","msg":"Updating tag in charts/**-test-quickstart-3/values.yaml to 0.0.3","time":"2019-08-22T11:52:44Z"}
+{"level":"info","msg":"Tag v0.0.3 created and pushed to remote origin","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"","time":"2019-08-22T11:52:47Z"}
+{"level":"warning","msg":"failed to find secret kaniko-secret in namespace **: secrets \"kaniko-secret\" not found","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"PipelineActivity for *******-**-test-quickstart-3-master-1","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"Applying changes ","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"upserted PipelineResource *******-**-test-quickstart-3-ma for the git repository https://github.com/*******/**-test-quickstart-3.git and branch master","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"upserted Task *******-**-test-quickstart-3-ma-tvhk6-from-build-pack-1","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"upserted Pipeline *******-**-test-quickstart-3-ma-tvhk6-1","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"created PipelineRun *******-**-test-quickstart-3-ma-tvhk6-1","time":"2019-08-22T11:52:47Z"}
+{"level":"info","msg":"created PipelineStructure *******-**-test-quickstart-3-ma-tvhk6-1","time":"2019-08-22T11:52:47Z"}
